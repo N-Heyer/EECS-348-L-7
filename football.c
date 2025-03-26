@@ -19,3 +19,27 @@ void findCombinations(int score) {
             }
         }
     }
+
+    if (!found) {
+        printf("No valid scoring combos for %d.\n", score);
+    }
+    printf("\n");
+}
+
+int main() {
+    int score;
+
+    while (1) {
+        printf("Enter the NFL score (0 or 1 to STOP): ");
+        scanf("%d", &score);
+
+        if (score <= 1) {
+            break;
+        }
+
+        findCombinations(score);
+    }
+
+    printf("Program Term.\n");
+    return 0;
+}
